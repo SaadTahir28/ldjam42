@@ -6,8 +6,12 @@ using DG.Tweening;
 public class GunController : MonoBehaviour
 {
 
-    public float rateOfFire;
-    public float bulletStrength;
+    //Bullet
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
+    public float bulletSpeed = 6f;
+    public float bulletDistance = 2f;
+    public float rateOfFire = 1f;
 
     private bool canFire;
     public bool CanFire
@@ -21,16 +25,13 @@ public class GunController : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, rotation_z + offset);
     }
 
-
-    private void Update()
-    {
-        if (canFire)
-            Fire();
-    }
-
-    public void Fire()
+    public void  Fire()
     {
         print("Fire by GC");
+        GameObject bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+        bullet.GetComponent<>
+        // Destroy the bullet after 2 seconds
+        Destroy(bullet, bulletDistance);
     }
 
 }

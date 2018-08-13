@@ -52,10 +52,10 @@ public class PlayerController : MonoBehaviour
     }
     private void GunFire()
     {
-        if (Input.GetMouseButton(0) && !gunController.CanFire)
+        if (Input.GetMouseButtonDown(0))
         {
             print("Start Fire by PC");
-            gunController.CanFire = true;
+            gunController.Fire();
         }
         else if (Input.GetMouseButtonUp(0))
         {

@@ -154,8 +154,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991297cbeaeb3d84ea6f143462897acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateOfFire: 0
-  bulletStrength: 0
+  bulletPrefab: {fileID: 1578239451957002, guid: e62cffd04808f1144a03641971a1b5ae,
+    type: 2}
+  bulletSpawn: {fileID: 975711193}
+  bulletSpeed: 6
+  bulletDistance: 2
+  rateOfFire: 10
 --- !u!1 &975711191
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +170,7 @@ GameObject:
   - component: {fileID: 975711193}
   - component: {fileID: 975711192}
   m_Layer: 0
-  m_Name: gun
+  m_Name: gun_arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
